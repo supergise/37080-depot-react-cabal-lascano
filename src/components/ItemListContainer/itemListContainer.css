@@ -1,0 +1,8 @@
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    color:  rgb(5, 94, 78);
+    letter-spacing: 2px;
+};
