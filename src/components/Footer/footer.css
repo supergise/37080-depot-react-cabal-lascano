@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+section ul {
+    list-style: none;
+    display: flex;
+}
+
+section ul li {
+    margin: 0px 10px;
+}
+
+section a {
+    font-size: 25px;
+    color: rgb(5, 94, 78);
+}
+
+section a:hover {
+    color: lightcoral;
+}

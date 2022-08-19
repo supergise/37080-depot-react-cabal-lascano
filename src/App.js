@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './components/Header/Header';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
-import Main from './components/Main/Main';
 
 const App = () => {
   return (
     <>
       <Header />
-      <Main />
+      <ItemListContainer greeting= 'Hi!'/>
       <Footer />
     </>
   );
