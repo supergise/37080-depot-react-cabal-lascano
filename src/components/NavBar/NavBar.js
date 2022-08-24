@@ -9,7 +9,7 @@ function NavBar() {
     return (
     <>
         <Navbar bg="light" variant="light">
-        <Container>
+        <Container fluid>
             <Navbar.Brand href="#home">
             <img
             src="./logo.png"
@@ -22,8 +22,10 @@ function NavBar() {
                 <Nav.Link href="#prints">Prints</Nav.Link>
                 <Nav.Link href="#about">About me</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
-                <Nav.Link href="#shop"></Nav.Link>
+                <Nav.Link href="#shop">
                 <CartWidget />
+                <span>10</span>
+                </Nav.Link>
             </Nav>
             
         </Container>
