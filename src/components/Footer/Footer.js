@@ -2,13 +2,14 @@ import React from 'react';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { SiFacebook } from 'react-icons/si';
 import { ImPinterest2 } from 'react-icons/im';
+import logo from '../../img/logo.png';
 import './footer.css';
 
 const Footer = () => {
     return (
         <footer>
             <section>
-                <h3>Depot Universe co.</h3>
+                <img src={logo} className='logoSign'  alt="logo de Ani Vidotto" /> 
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/universo.depot/?hl=es" target="_blank" rel="noopener noreferrer"><AiOutlineInstagram/></a>
