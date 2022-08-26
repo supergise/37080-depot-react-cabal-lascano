@@ -1,4 +1,4 @@
-section {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,10 +10,11 @@ section {
 section ul {
     list-style: none;
     display: flex;
+    padding: 0;
 }
 
 section ul li {
-    padding: 0px 20px 0px 0px;
+    padding: 0px 10px 0px 10px;
     margin-top: 20px;
 }
 
