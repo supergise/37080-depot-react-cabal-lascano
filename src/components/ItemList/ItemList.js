@@ -7,8 +7,7 @@ const ItemList = ( { items } ) => {
             return (
                 <Item key={item.id} item={ item } />
             );
-        })
-            
+        })  
     );
 }
 

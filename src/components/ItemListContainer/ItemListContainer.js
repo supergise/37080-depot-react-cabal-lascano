@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
-import './itemListContainer.css';
 import { getProducts } from '../../mok/products';
-
-const onAdd = (count) => {
-    console.log('To Do add ' + count + ' items to cart')
-}
+import './itemListContainer.css';
 
 const ItemListContainer = ( {greeting} ) => {
     const [items, setItems] = useState([]);
@@ -21,10 +16,12 @@ const ItemListContainer = ( {greeting} ) => {
     return (
         <>
             <h2 className='greeting'> {greeting} Welcome to my site </h2>
-            <ItemCount stock={5} initial={ 1 } onAdd={ onAdd }  />
+            <section className='containerCards'>
             <ItemList items={ items } />
+            </section>
         </>
     );
 };
+
 
 export default ItemListContainer;

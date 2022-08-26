@@ -2,13 +2,13 @@ import React from 'react';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { SiFacebook } from 'react-icons/si';
 import { ImPinterest2 } from 'react-icons/im';
-import logo from '../../img/logo.png';
+import logo from '../../assets/logo.png';
 import './footer.css';
 
 const Footer = () => {
     return (
         <footer>
-            <section>
+            <section className='footer'>
                 <img src={logo} className='logoSign'  alt="logo de Ani Vidotto" /> 
                 <ul>
                     <li>
