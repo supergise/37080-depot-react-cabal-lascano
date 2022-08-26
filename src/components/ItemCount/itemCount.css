@@ -52,10 +52,14 @@
     color: #4e4d4d;
 }
 
-.button-icon {
-    font-size: 20px !important;
+.formControl {
+    padding: 0 10px;
 }
 
 .buttonControl {
-    padding: 0 10px;
+    font-size: 1.2 rem !important;
 }
+
+.btn:focus {
+    box-shadow: none !important;
+} 
