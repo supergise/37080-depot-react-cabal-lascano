@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from "react";
-import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../../mok/products';
-import './itemListContainer.css';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
-const ItemListContainer = ( { greeting } ) => {
-    const [items, setItems] = useState([]);
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState({});
 
     useEffect(() => {
         getProducts
-            .then(data => setItems(data))
+            .then(data => setItem(data.find(product => product.id === 1)))
             .catch(error => console.log(error))
             .finally(() => console.log('Finally'));
     }, []);
     
     return (
         <>
-            <h2 className='greeting'> { greeting } Welcome to my site </h2>
             <section className='containerCards'>
-            <ItemList items={ items } />
+            <ItemDetail item={ item } />
             </section>
         </>
     );
 };
 
-
-export default ItemListContainer;
+export default ItemDetailContainer;
