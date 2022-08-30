@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     background: radial-gradient(50% 50% at 50% 50%, #ebcbcb 0%, rgba(9, 9, 9, 0) 100%);
+    margin-bottom: 20px;
 }
 
 .card {

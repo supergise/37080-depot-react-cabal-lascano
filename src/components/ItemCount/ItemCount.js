@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import './itemCount.css';
 
-const ItemCount = ( {stock, initial, onAdd } ) => {
+const ItemCount = ( { stock, initial, onAdd } ) => {
         const [count, setCount] = useState(initial);
     
         const add = () => {
@@ -34,7 +34,7 @@ const ItemCount = ( {stock, initial, onAdd } ) => {
             <button onClick={ () => onAdd(count) } 
                     className='primaryButton' 
                     disabled={ count <= 0 }>
-                        Ver más
+                        Agregar al carrito
             </button>
         </>
     );

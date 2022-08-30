@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../../mok/products';
 import './itemListContainer.css';
 
-const ItemListContainer = ( {greeting} ) => {
+const ItemListContainer = ( { greeting } ) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const ItemListContainer = ( {greeting} ) => {
     
     return (
         <>
-            <h2 className='greeting'> {greeting} Welcome to my site </h2>
+            <h2 className='greeting'> { greeting } Welcome to my site </h2>
             <section className='containerCards'>
             <ItemList items={ items } />
             </section>

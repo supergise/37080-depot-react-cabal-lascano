@@ -1,0 +1,24 @@
+.contentDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    padding: 40px;
+    border-radius: 5px;
+    background: none;
+} 
+
+.contentDetail h2 {
+    color: #515050;
+    margin: 10px;
+    font-size: 1.5rem;
+    background: none;
+}
+
+.contentDetail p {
+    color: #515050;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: none;
+}

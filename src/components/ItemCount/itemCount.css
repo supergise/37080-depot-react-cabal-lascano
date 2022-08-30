@@ -6,6 +6,7 @@
     border-radius: 2px;
     height: 40px;
     width: 200px;
+    margin: 10px;
 }
 
 .primaryButton:hover {
@@ -20,6 +21,8 @@
 
 .formControl {
     padding: 0 10px;
+    background: none;
+    margin: 0 30px;
 }
 
 .buttonControl {
