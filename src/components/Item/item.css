@@ -17,6 +17,7 @@
     width: 398px;
     border-radius: 2px;
 }
+
 .content {
     display: flex;
     flex-direction: column;

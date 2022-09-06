@@ -1,0 +1,21 @@
+.containerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.loaderIcon {
+    font-size: 50px;
+    color: #a5809fda;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
