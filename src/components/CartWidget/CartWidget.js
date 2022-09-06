@@ -1,11 +1,13 @@
 import React from 'react';
-import './cartWidget.css';
 import { MdShoppingCart } from 'react-icons/md';
+import './cartWidget.css';
 
 const CartWidget = () => {
     return (
-        <MdShoppingCart className='iconShop' />
-
+        <div>
+            <MdShoppingCart className='iconShop' />
+            <span>5</span>
+        </div>
     );
 };
 

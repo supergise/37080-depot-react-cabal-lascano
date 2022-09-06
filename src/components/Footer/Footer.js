@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer>
             <section className='footer'>
-                <img src={logo} className='logoSign'  alt="logo de Ani Vidotto" /> 
+                <img src={ logo } className='logoSign'  alt="logo de Ani Vidotto" /> 
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/universo.depot/?hl=es" target="_blank" rel="noopener noreferrer"><AiOutlineInstagram/></a>

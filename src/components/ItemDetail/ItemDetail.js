@@ -10,7 +10,7 @@ const ItemDetail = ( { item } ) => {
     return(
         <>
             <article className='card'>
-                <img src={ "img/" + item.img } alt={ item.description } /> 
+                <img src={ "/img/" + item.img } alt={ item.description } /> 
             </article>    
             <article className='contentDetail'>
                 <h2>{ item.title }</h2>
@@ -19,7 +19,7 @@ const ItemDetail = ( { item } ) => {
                 <ItemCount initial={ 1 } onAdd={ onAdd } stock= {item.stock} />
             </article>
         </>
-    )
-}
+    );
+};
     
 export default ItemDetail;

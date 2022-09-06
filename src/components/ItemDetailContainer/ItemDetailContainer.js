@@ -1,22 +1,37 @@
 import React, { useState, useEffect } from "react";
-import { getProducts } from '../../mok/products';
+import { products } from '../../mok/products';
+import { useParams } from "react-router-dom";
+import Spinner from '../Spinner/Spinner';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const { idProd } = useParams();
+    const idProdNumber = Number(idProd);
 
     useEffect(() => {
-        getProducts
-            .then(data => setItem(data.find(product => product.id === 1)))
+        const getProduct  = () => 
+            new Promise((res, rej) => {
+                const filterProducts = products.find(
+                    (product) => product.id === idProdNumber
+                    );
+                    setTimeout(() => res(idProdNumber ? filterProducts : null), 2000);
+                });
+
+        getProduct()
+            .then(data => setItem(data))
             .catch(error => console.log(error))
-            .finally(() => console.log('Finally'));
-    }, []);
+            .finally(() => setIsLoading(false));
+    }, [idProdNumber]);
     
     return (
         <>
-            <section className='containerCards'>
-            <ItemDetail item={ item } />
-            </section>
+            { isLoading ? <Spinner/> : 
+                (<section className='containerCards'>
+                    <ItemDetail item={ item } />
+                </section>) 
+            }
         </>
     );
 };
