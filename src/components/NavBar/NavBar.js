@@ -12,7 +12,7 @@ function NavBar() {
             <Navbar bg="light" variant="light">
                 <Container fluid>
 
-                    <Navbar.Brand as={Link} to="/">
+                    <Navbar.Brand as={ Link } to="/">
                         <img
                             src="/logo.png"
                             className="d-inline-block align-top logo"
@@ -22,10 +22,10 @@ function NavBar() {
                     </Navbar.Brand>
 
                     <Nav className="ml-auto">
-                        <Nav.Link as={Link} to="/category/Universes">Universes</Nav.Link>
-                        <Nav.Link as={Link} to="/category/Plants">Plants</Nav.Link>
-                        <Nav.Link as={Link} to="/category/Flowers">Flowers</Nav.Link>
-                        <Nav.Link as={Link} to="/cart">
+                        <Nav.Link as={ Link } to="/category/Universes">Universes</Nav.Link>
+                        <Nav.Link as={ Link } to="/category/Plants">Plants</Nav.Link>
+                        <Nav.Link as={ Link } to="/category/Flowers">Flowers</Nav.Link>
+                        <Nav.Link as={ Link } to="/cart">
                             <CartWidget />
                         </Nav.Link>
                     </Nav>

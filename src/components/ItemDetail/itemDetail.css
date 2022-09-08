@@ -21,4 +21,19 @@
     font-size: 1.2rem;
     font-weight: 400;
     background: none;
+    text-decoration: none;
+}
+
+.contentDetailLink {
+    color: #2c2b2b;
+    font-size: 1.2rem;
+    font-style: italic;
+    background: none;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.noBorder {
+    background-color: transparent;
+    border: none !important;
 }

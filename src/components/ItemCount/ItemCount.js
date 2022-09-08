@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button';
 import './itemCount.css';
 
 const ItemCount = ( { stock, initial, onAdd } ) => {
-        const [count, setCount] = useState(initial);
-        const add = () => count < stock && setCount(count + 1);
-        const substract = () => count > 0 && setCount(count - 1);
+    const [count, setCount] = useState(initial);
+    const add = () => count < stock && setCount(count + 1);
+    const substract = () => count > 0 && setCount(count - 1);
 
     return (
         <>
@@ -24,6 +24,7 @@ const ItemCount = ( { stock, initial, onAdd } ) => {
                 </Form.Control> 
                 
                 <Button 
+                    className='buttonControl'
                     onClick={ add } 
                     variant="outline-secondary">
                         +

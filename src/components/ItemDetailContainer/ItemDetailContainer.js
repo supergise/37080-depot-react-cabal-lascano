@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { products } from '../../mok/products';
 import { useParams } from "react-router-dom";
-import Spinner from '../Spinner/Spinner';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
