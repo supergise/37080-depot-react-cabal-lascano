@@ -11,7 +11,7 @@ const Item = ( { item } ) => {
                 <p>{ "USD " + item.price }</p>
                 <p>{ item.category }</p>
                 <Link to={ `/item/${ item.id }` }>
-                    <button className='primaryButton'>Ver detalles</button>
+                    <button className='primaryButton'>See more</button>
                 </Link>
             </div>
         </article>

@@ -1,10 +1,11 @@
 import React from 'react';
+import Form from '../Form/Form';
 
 const Cart = () => {
     return (
-        <span>
-            To Do Cart
-        </span>
+        <div>
+            <Form/>
+        </div>
     );
 };
 
