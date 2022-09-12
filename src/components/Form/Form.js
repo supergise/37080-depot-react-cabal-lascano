@@ -15,7 +15,7 @@ const Form = () => {
 
     return (
         <div className='contentForm'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={ handleSubmit }>
                 <input 
                     className='formLabel'
                     type="text"
