@@ -17,21 +17,21 @@ const ItemDetail = ({ item }) => {
     return (
         <>
             <article className="card">
-                <img src={ '/img/' + item.img } alt={item.description} />
+                <img src={ '/img/' + item.img } alt={ item.description } />
             </article>
             <article className="contentDetail">
                 <h2>{ item.title }</h2>
-                <p> { "USD " + item.price } </p>
+                <p> { "u$d " + item.price } </p>
                 <p> { item.description } </p>
 
                 {quantity === 0 ? (
-                    <ItemCount initial={1} onAdd={onAdd} stock={item.stock} />
+                    <ItemCount initial={ 1 } onAdd={ onAdd } stock={item.stock} />
                 ) : (
                     <>
                         <p>Added { quantity } prints to cart</p>
                         <Link to="/cart" className='noBorder'>
                             <button className='primaryButton'>
-                                Checkout
+                                Go to cart
                             </button>
                         </Link>
                         <Link to="/" className='contentDetailLink'>

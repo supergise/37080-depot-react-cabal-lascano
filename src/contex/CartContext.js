@@ -34,8 +34,24 @@ const CartProvider = ({ children }) => {
     
     const clearCart = () => setCart([]);
 
+    const totalQuantityWidget = () => {
+        let accumulador = 0;
+        cart.forEach((product) => {
+            accumulador +=  product.quantity;
+        });
+        return accumulador;
+    };
+
+    const totalPrice = () => {
+        let accumulador = 0;
+        cart.forEach((product) => {
+            accumulador += product.price * product.quantity;
+        });
+        return accumulador;
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, clearCart, deleteProduct }}>
+        <CartContext.Provider value={{ cart, addToCart, clearCart, deleteProduct, totalPrice, totalQuantityWidget }}>
             { children }
         </CartContext.Provider>
     );

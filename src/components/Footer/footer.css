@@ -24,7 +24,7 @@ section a {
 }
 
 section a:hover {
-    color: lightcoral;
+    color: rgb(240, 128, 128);
 }
 
 .logoSign {
