@@ -6,7 +6,7 @@ import './itemDetail.css';
 
 const ItemDetail = ({ item }) => {
     const [quantity, setQuantity] = useState(0);
-    const { addToCart } = useContext(CartContext);
+    const { addToCart, qty } = useContext(CartContext);
 
     const onAdd = (quantity) => {
         setQuantity(quantity);
@@ -21,11 +21,17 @@ const ItemDetail = ({ item }) => {
             </article>
             <article className="contentDetail">
                 <h2>{ item.title }</h2>
-                <p> { "u$d " + item.price } </p>
+                <p> { "u$d " + item.price + "  stock: " + item.stock } </p>
                 <p> { item.description } </p>
 
-                {quantity === 0 ? (
-                    <ItemCount initial={ 1 } onAdd={ onAdd } stock={item.stock} />
+                { quantity === 0 ? (
+                    <>
+                        { qty(item.id) > 0 
+                            ? <p>There are { qty(item.id) } prints already on your cart</p> 
+                            : ''
+                        }
+                        <ItemCount initial={ qty(item.id) === 0 ? 1 : qty(item.id) } onAdd={ onAdd } stock={item.stock} />
+                    </>
                 ) : (
                     <>
                         <p>Added { quantity } prints to cart</p>
@@ -40,7 +46,7 @@ const ItemDetail = ({ item }) => {
                             </p>
                         </Link>
                     </>
-                )}
+                ) }
 
             </article>
         </>

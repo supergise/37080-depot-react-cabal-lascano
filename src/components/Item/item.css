@@ -7,14 +7,14 @@
 }
 
 .card {
-    width: 400px;
+    width: 350px;
     border-radius: 2px;
     box-shadow: 3px 5px 5px rgba(97, 97, 97, 0.8);
     margin: 20px;
 }
 
 .card img {
-    width: 398px;
+    width: 348px;
     border-radius: 2px;
 }
 

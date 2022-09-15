@@ -21,7 +21,7 @@ const CartProvider = ({ children }) => {
     const addQuantity = (item) => {
         const currentCart = cart.map((product) => 
             product.id === item.id
-                ? { ...product, quantity:product.quantity + item.quantity }
+                ? { ...product, quantity: item.quantity }
                 : product
         );
         setCart(currentCart);
@@ -35,23 +35,39 @@ const CartProvider = ({ children }) => {
     const clearCart = () => setCart([]);
 
     const totalQuantityWidget = () => {
-        let accumulador = 0;
+        let accumulator = 0;
         cart.forEach((product) => {
-            accumulador +=  product.quantity;
+            accumulator +=  product.quantity;
         });
-        return accumulador;
+        return accumulator === 0 ? '' : accumulator;
+    };
+
+    const qty = (id) => {
+        const item = cart.find(  product => product.id === id  );
+        return item ? item.quantity : 0;
+        
     };
 
     const totalPrice = () => {
-        let accumulador = 0;
+        let accumulator = 0;
         cart.forEach((product) => {
-            accumulador += product.price * product.quantity;
+            accumulator += product.price * product.quantity;
         });
-        return accumulador;
+        return accumulator;
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, clearCart, deleteProduct, totalPrice, totalQuantityWidget }}>
+        <CartContext.Provider 
+            value={{ 
+                cart, 
+                addToCart, 
+                clearCart, 
+                deleteProduct, 
+                totalPrice, 
+                totalQuantityWidget,
+                qty
+            }}
+        >
             { children }
         </CartContext.Provider>
     );
