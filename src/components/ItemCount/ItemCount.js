@@ -20,7 +20,7 @@ const ItemCount = ( { stock, initial, onAdd } ) => {
                 </Button>
 
                 <Form.Control 
-                    disabled value={ 'Prints available for you: ' + count }>
+                    disabled value={ 'Add prints to your cart: ' + count }>
                 </Form.Control> 
                 
                 <Button 

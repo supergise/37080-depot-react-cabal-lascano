@@ -2,13 +2,26 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../contex/CartContext';
 import { IoTrashOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
 import '../Cart/cart.css';
 
 const Cart = () => {
     const { cart, clearCart, deleteProduct, totalPrice } = useContext(CartContext);
-    
     console.log(cart);
+
+    if (cart.length === 0) {
+        return (
+            <div className='cartMsg'>
+                <h4> Looks like you haven't added anything to your cart yet </h4>
+                <Link to="/" className='noBorder'>
+                    <button className='primaryButton'>
+                        View Products
+                    </button>
+                </Link>
+            </div>
+        );    
+    };
 
     return (
         <div>
@@ -24,8 +37,10 @@ const Cart = () => {
             { cart.map((product) => (
                 <section key={ product.id } className='cartSubTitles'>
                     <div className='cartSubTitleProd'>
-                        <img  className='cartPic' src={ '/img/' + product.img } alt={ product.description }  />
-                        <span>{ product.title }</span>
+                        <Link to={ `/item/${ product.id }` }>
+                            <img  className='cartPic' src={ '/img/' + product.img } alt={ product.description }  />
+                        </Link>
+                            <span>{ product.title }</span>
                     </div>
                     <span className='cartSubTitlesOthers'> u$d { product.price }</span>
                     <span className='cartSubTitlesOthers'> { product.quantity }</span>

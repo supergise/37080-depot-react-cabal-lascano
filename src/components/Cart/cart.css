@@ -6,7 +6,7 @@
     padding-bottom: 20px;
     color:  rgb(86, 89, 89);
     letter-spacing: 2px;
-    border-bottom: 3px solid rgb(2, 2, 2) ;
+    border-bottom: 3px solid rgb(2, 2, 2);
     width: 30%;
 }
 
@@ -66,4 +66,23 @@
     align-content: flex-end;
     justify-content: flex-end;
     margin-right: 100px;
+}
+
+.cartMsg {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-image: url(/public/img/image4.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartMsg h4 {
+    font-size: 1rem;
+    color:  rgb(62, 63, 63);
+    letter-spacing: 2px;
+    margin-top: 400px;
 }
