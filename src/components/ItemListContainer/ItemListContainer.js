@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { products } from '../../mok/products';
 import { useParams } from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import './itemListContainer.css';
 
 const ItemListContainer = ( { greeting } ) => {
     const [items, setItems] = useState([]);
-    const { categoryName } = useParams();
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const getProducts  = () => 
-            new Promise((res, rej) => {
-                const filterProducts = products.filter(
-                    (product) => product.category === categoryName
-                );
-                setTimeout(() => res(categoryName ? filterProducts : products), 2000);
-            });
+    const { categoryName } = useParams();  
 
-        setIsLoading(true);
-        
-        getProducts()
-            .then(data => setItems(data))
-            .catch(error => console.log(error))
-            .finally(() => setIsLoading(false));
+    useEffect(() => {
+        const itemCollection = collection(db, "productos");
+        const q = categoryName 
+            ? query(itemCollection, where('category', '==', categoryName)) 
+            : itemCollection;
+            
+        getDocs(q).then((resp) => {
+            const products = resp.docs.map((product) => {
+                return {
+                    id: product.id,
+                    ...product.data()
+                }
+            });
+            setItems(products);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        });
     }, [categoryName]);
     
     return (

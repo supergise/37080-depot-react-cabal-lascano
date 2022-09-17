@@ -1,29 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { products } from '../../mok/products';
 import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
+import { db } from '../../firebaseConfig';
+import { doc, getDoc, collection } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    
     const { idProd } = useParams();
-    const idProdNumber = Number(idProd);
 
     useEffect(() => {
-        const getProduct  = () => 
-            new Promise((res, rej) => {
-                const filterProducts = products.find(
-                    (product) => product.id === idProdNumber
-                    );
-                    setTimeout(() => res(idProdNumber ? filterProducts : null), 2000);
-                });
+        const itemCollection = collection(db, "productos");
+        const ref = doc(itemCollection, idProd);
 
-        getProduct()
-            .then(data => setItem(data))
-            .catch(error => console.log(error))
-            .finally(() => setIsLoading(false));
-    }, [idProdNumber]);
+        getDoc(ref).then((resp) => {
+            setItem({
+                id: resp.id,
+                ...resp.data()
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        });
+
+    }, [idProd]);
     
     return (
         <>
