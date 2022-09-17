@@ -43,9 +43,8 @@ const CartProvider = ({ children }) => {
     };
 
     const qty = (id) => {
-        const item = cart.find(  product => product.id === id  );
+        const item = cart.find(product => product.id === id);
         return item ? item.quantity : 0;
-        
     };
 
     const totalPrice = () => {

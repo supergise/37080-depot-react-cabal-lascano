@@ -40,11 +40,11 @@ const Cart = () => {
                         <Link to={ `/item/${ product.id }` }>
                             <img  className='cartPic' src={ '/img/' + product.img } alt={ product.description }  />
                         </Link>
-                            <span>{ product.title }</span>
+                        <span>{ product.title }</span>
                     </div>
                     <span className='cartSubTitlesOthers'> u$d { product.price }</span>
                     <span className='cartSubTitlesOthers'> { product.quantity }</span>
-                    <span className='cartSubTitlesOthers'> u$d { product.price * product.quantity } </span>
+                    <span className='cartSubTitlesOthers'> u$d { product.price * product.quantity }</span>
                     <IoTrashOutline onClick={ () => deleteProduct(product.id) } className='cartTrashIcon cartSubTitlesOthers' /> 
                 </section>
             ))}
