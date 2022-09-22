@@ -9,15 +9,17 @@ const CartData = () => {
     const handleId = (id) => {
         setIdCompra(id)
     };
+
     if (idCompra) {
-        return <h4 className='cartMsgBuy'>Thanks You for buying Prints. Your id number is: <strong>{ idCompra }</strong> </h4>
+        return <h4 className='cartMsgBuy'>
+            Thanks You for buying Prints. Your id number is: <strong>{ idCompra }</strong>
+        </h4>
     } 
 
     return (
         <div>
             <h2 className='cartTitle'> My Data </h2>
             <Form cart={ cart } totalPrice={ totalPrice } clearCart={ clearCart } handleId={ handleId } />
-        
         </div>
     )
 };

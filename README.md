@@ -1,4 +1,4 @@
-# PRIMERA ENTREGA DEL PROYECTO FINAL
+# ENTREGA DEL PROYECTO FINAL
 
 En esta rama se adjuntan los desafíos realizados hasta el momento:
 
