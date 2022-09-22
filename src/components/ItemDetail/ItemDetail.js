@@ -42,7 +42,7 @@ const ItemDetail = ({ item }) => {
                         </Link>
                         <Link to="/" className='contentDetailLink'>
                             <p>
-                                View more prints
+                                <strong className='noBorder'>View more prints</strong>
                             </p>
                         </Link>
                     </>

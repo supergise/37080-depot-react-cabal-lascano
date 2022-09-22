@@ -6,8 +6,8 @@
     border: none;
     border-radius: 2px;
     height: 40px;
-    width: 200px;
-    margin: 10px;
+    width: 180px;
+    /* margin: 10px; */
 }
 
 .primaryButton:hover {
