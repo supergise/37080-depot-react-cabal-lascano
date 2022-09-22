@@ -1,25 +1,37 @@
-.contentForm {
+.container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 100px;
-    padding: 40px;
-    border-radius: 5px;
+    margin: 40px;
+}
+
+.contentForm {
+    width: 90%;
+    max-width: 600px;
 } 
+
 .formLabel {
+    flex-basis: 90%;
+    width: 100%;
+    max-width: 500px;
+    background-color: none;
+    padding: 10px 10px 10px;
+    margin: 10px;
     color: #4e4d4d;
     font-size: 1rem;
-    font-weight: 600;
-    background-color: none;
-    border: 2px grey solid;
-    border-radius: 2px;
-    height: 40px;
-    width: 200px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #999;
 }
 
 .content p {
     color: #515050;
     font-size: 1rem;
     font-weight: 400;
+}
+
+.errorIcon {
+    color: rgb(180, 4, 4);
+    font-size: 22px;
 }

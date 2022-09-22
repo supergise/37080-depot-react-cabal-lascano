@@ -40,7 +40,7 @@
     font-size: 1.5rem;
     color: #4e4d4d;
 }
-    
+
 .cartTrashIcon:hover {
     color: rgb(240, 128, 128);
     cursor: pointer;
@@ -61,11 +61,13 @@
     cursor: pointer;
 }
 
-.totalCart {
+.totalCart,
+.totalLeft {
     display: flex;
     align-content: flex-end;
     justify-content: flex-end;
     margin-right: 100px;
+    text-decoration: none;
 }
 
 .cartMsg {
@@ -85,4 +87,15 @@
     color:  rgb(62, 63, 63);
     letter-spacing: 2px;
     margin-top: 400px;
+}
+
+.cartMsgBuy {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 300px;
+    font-size: 1.5rem;
+    color:  rgb(62, 63, 63);
+    letter-spacing: 2px;
 }

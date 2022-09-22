@@ -11,7 +11,6 @@ const ItemDetail = ({ item }) => {
     const onAdd = (quantity) => {
         setQuantity(quantity);
         addToCart({ ...item, quantity: quantity });
-        console.log("Se agregaran al carrito " + quantity + " del print " + item.title);
     };
 
     return (
@@ -42,7 +41,7 @@ const ItemDetail = ({ item }) => {
                         </Link>
                         <Link to="/" className='contentDetailLink'>
                             <p>
-                                View more prints
+                                <strong className='noBorder'>View more prints</strong>
                             </p>
                         </Link>
                     </>

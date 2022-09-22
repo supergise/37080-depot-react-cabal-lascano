@@ -13,8 +13,6 @@ const CartProvider = ({ children }) => {
             setCart([...cart, item]);
         }
     }; 
-
-    console.log(cart);  
     
     const isInCart = (id) => cart.some((product) => product.id === id);
 
@@ -28,7 +26,6 @@ const CartProvider = ({ children }) => {
     };
 
     const deleteProduct = (id) => {
-        console.log('eliminando producto ' + id)
         setCart(cart.filter((product) => product.id !== id));
     };
     

@@ -1,15 +1,12 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../../contex/CartContext';
-import { IoTrashOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import Form from '../Form/Form';
+import { IoTrashOutline } from 'react-icons/io5';
 import '../Cart/cart.css';
 
 const Cart = () => {
     const { cart, clearCart, deleteProduct, totalPrice } = useContext(CartContext);
-    console.log(cart);
-
+    
     if (cart.length === 0) {
         return (
             <div className='cartMsg'>
@@ -51,10 +48,12 @@ const Cart = () => {
             <section>
                 <span className='clearCart' onClick={ clearCart }> Remove all from cart </span>
                 <h4 className='totalCart'> Total: u$d { totalPrice() } </h4>
+                <Link to="/cartData" className='totalLeft'> 
+                    <button className='primaryButton'>
+                        Checkout
+                    </button>
+                </Link>
             </section>
-
-            <h2 className='cartTitle'> My Data </h2>
-            <Form/>
         </div>
     );
 };
