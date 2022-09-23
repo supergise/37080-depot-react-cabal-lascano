@@ -19,7 +19,7 @@ const CartData = () => {
     return (
         <div>
             <h2 className='cartTitle'> My Data </h2>
-            <Form cart={ cart } totalPrice={ totalPrice } clearCart={ clearCart } handleId={ handleId } />
+            <Form cart={ cart } totalPrice={ totalPrice } clearCart={ clearCart } handleId={ handleId }  />
         </div>
     )
 };

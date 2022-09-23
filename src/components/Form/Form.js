@@ -4,27 +4,29 @@ import { db } from '../../firebaseConfig';
 import { MdError } from 'react-icons/md';
 import './form.css';
 
-const Form = ({ cart, totalPrice, clearCart, handleId }) => {
+const Form = ({ cart, totalPrice, clearCart, handleId, setIsLoading }) => {
     const [formData, setFormData] =     useState({ name:'', lastName:'', phone:'', email:'', confirmEmail:'' });
     const [formErrors, setFormErrors] = useState({ name:'', lastName:'', phone:'', email:'', confirmEmail:'' });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const order = {
             buyer: {name: formData.name, lastName: formData.lastName, phone: formData.phone, email: formData.email },
             items: cart,
             totalPrice: totalPrice(),
             date: serverTimestamp(),
         };
-
         const ordersCollection = collection(db, 'orders');
 
         addDoc(ordersCollection, order)
         .then((resp) => {
             handleId(resp.id);
             clearCart();
-        });
+        })
+        .catch((error) => {
+            console.log(error);
+        })
     };
 
     const handleChange = (e) => {

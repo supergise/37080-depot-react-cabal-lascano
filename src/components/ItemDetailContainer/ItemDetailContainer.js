@@ -32,8 +32,9 @@ const ItemDetailContainer = () => {
     
     return (
         <>
-            { isLoading ? <Spinner/> : 
-                (<section className='containerCards'>
+            { isLoading 
+                ? <Spinner/> 
+                : (<section className='containerCards'>
                     <ItemDetail item={ item } />
                 </section>) 
             }
