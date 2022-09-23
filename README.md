@@ -1,25 +1,42 @@
-# ENTREGA DEL PROYECTO FINAL
+### PROYECTO FINAL - Ecommerce realizado en React
 
-En esta rama se adjuntan los desafíos realizados hasta el momento:
+De qué se trata el ecommerce...descripción
 
-Crear la App utilizando el CLI
+Pricipales funcionalidades:
+Item count (agrega unidades al carrito) Cart (resumen de la compra) Form datos y validaciones (poner gift)
+```javascript 
+const = 'poner la funcion que corresponda '
+```
 
-Menú e-commerce
 
-Crea tu landing
+Se inluyeron las librerías de:
 
-Contador con botón
+- [ React Router Dom  ]( https://reactrouter.com/en/main )
 
-Catálogo con MAPS y Promises
+- [ React-Bootstrap ]( https://react-bootstrap.github.io/ )
 
-Detalle de Producto
+- [ React-icons ]( https://react-icons.github.io/react-icons/ )
 
-Routing
+- [ Firebase ]( https://firebase.google.com/?hl=es )
 
-Se inluyeron las librerías de React-icons y de React-bootstrap.
 
-Se adjunta demo de Routing:
+
+#### Link a la web hosteada en vercel:
 
 ![](./gitHubAssets/routingDemo.gif)
 
-**Giselle Cabal Lascano**
+#### Pasos para levantar el proyecto localmente:
+
+``` 
+git clone https://github.com/supergise/37080-depot-react-cabal-lascano.git 
+```
+
+```
+npm install
+```
+
+```
+npm start
+```
+
+*Desarrollado por Giselle Cabal Lascano*
