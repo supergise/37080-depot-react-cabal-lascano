@@ -4,7 +4,7 @@ import { db } from '../../firebaseConfig';
 import { MdError } from 'react-icons/md';
 import './form.css';
 
-const Form = ({ cart, totalPrice, clearCart, handleId, setIsLoading }) => {
+const Form = ({ cart, totalPrice, clearCart, handleId }) => {
     const [formData, setFormData] =     useState({ name:'', lastName:'', phone:'', email:'', confirmEmail:'' });
     const [formErrors, setFormErrors] = useState({ name:'', lastName:'', phone:'', email:'', confirmEmail:'' });
 
@@ -45,10 +45,22 @@ const Form = ({ cart, totalPrice, clearCart, handleId, setIsLoading }) => {
                 if(value.length < 3) {                    
                     return 'Name too short!';
                 }
+                if(value.length > 20) {                    
+                    return 'Name too long!';
+                }
+                if(!value.match(/^[a-zA-Z\s]{3,20}$/)) {
+                    return 'Your name must contain only letters'
+                }
                 break;
             case 'lastName':
                 if(value.length === 0) {                    
                     return 'Last name required!';
+                }
+                if(value.length > 20) {                    
+                    return 'Last name too long!';
+                }
+                if(!value.match(/^[a-zA-Z\s]{3,20}$/)) {
+                    return 'Your last name must contain only letters'
                 }
                 break;
             case 'phone':
@@ -64,7 +76,7 @@ const Form = ({ cart, totalPrice, clearCart, handleId, setIsLoading }) => {
                 if(value.length === 0) {                    
                     return 'Email required!';
                 }
-                if(!value.match(/^[A-Za-z._\-0-9]*[@][A-Za-z]*[.][a-z]{2,4}$/)) {                    
+                if(!value.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {                    
                     return 'Invalid email please try again';
                 }
                 break;

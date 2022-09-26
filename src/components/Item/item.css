@@ -1,10 +1,11 @@
 .containerCards {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    flex-wrap: wrap;
     background: radial-gradient(50% 50% at 50% 50%, #ebcbcb 0%, rgba(9, 9, 9, 0) 100%);
     margin-bottom: 20px;
-}
+}   
 
 .card {
     width: 350px;

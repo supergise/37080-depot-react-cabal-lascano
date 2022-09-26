@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from '../ItemList/ItemList';
-import Spinner from '../Spinner/Spinner';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
+import Spinner from '../Spinner/Spinner';
+import ItemList from '../ItemList/ItemList';
 import './itemListContainer.css';
 
 const ItemListContainer = ( { greeting } ) => {

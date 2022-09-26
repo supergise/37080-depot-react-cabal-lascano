@@ -15,11 +15,11 @@ const ItemDetail = ({ item }) => {
 
     return (
         <>
-            <article className="card">
+            <article className="card boxContenDetail">
                 <img src={ '/img/' + item.img } alt={ item.description } />
             </article>
             <article className="contentDetail">
-                <h2>{ item.title }</h2>
+                <h2> { item.title } </h2>
                 <p> { "u$d " + item.price + "  stock: " + item.stock } </p>
                 <p> { item.description } </p>
 
@@ -46,7 +46,6 @@ const ItemDetail = ({ item }) => {
                         </Link>
                     </>
                 ) }
-
             </article>
         </>
     );
