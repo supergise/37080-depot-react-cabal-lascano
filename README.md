@@ -1,15 +1,46 @@
-### PROYECTO FINAL - Ecommerce realizado en React
+## eCommerce - Final Project Coderhouse
+-------------
 
-De qué se trata el ecommerce...descripción
+This eCommerce site was made to create a simple way to shop digital illustrated prints.  Its was developed using React as a frontend and Firebase as a product database.
 
-Pricipales funcionalidades:
-Item count (agrega unidades al carrito) Cart (resumen de la compra) Form datos y validaciones (poner gift)
+
+### Features
+-------------
+#### Products Features
+
+| Feature  | Coded?  | Description |
+| :------------ |:---------------:| -----:|
+| Add to cart     | ✔ | Ability of Add a Product on the System |
+|List Products      | ✔        |   Ability of List Products|
+| Edit a Product | ✔        |    Ability of Edit a Product |
+| Remove from cart | ✔        |    Ability of Delete a Product |
+| Stock | future versión      |   Ability of Update the Stock |
+
+#### Demo
+-------------
+![](./gitHubAssets/routingDemo1.gif)
+
+
+#### Purchase Features
+
+| Feature  | Coded?  | Description |
+| :------------ |:---------------:| -----:|
+| Create a Cart     | ✔ | Ability of Create a new Cart |
+|See Cart      | ✔        |   Ability to see the Cart and it items|
+| Remove a Cart | ✔        |    Ability of Remove a Cart |
+| Add Item | ✔        |    Ability of add a new Item on the Cart |
+| Remove a Item | ✔        |    Ability of Remove a Item from the Cart|
+| Checkout |  ✔    |   Ability to Checkout |
+
+
+
 ```javascript 
 const = 'poner la funcion que corresponda '
 ```
 
 
-Se inluyeron las librerías de:
+### Libraries
+-------------
 
 - [ React Router Dom  ]( https://reactrouter.com/en/main )
 
@@ -21,11 +52,14 @@ Se inluyeron las librerías de:
 
 
 
-#### Link a la web hosteada en vercel:
+### Demo
+-------------
+
 
 ![](./gitHubAssets/routingDemo.gif)
 
-#### Pasos para levantar el proyecto localmente:
+#### Lift the code locally
+-------------
 
 ``` 
 git clone https://github.com/supergise/37080-depot-react-cabal-lascano.git 
@@ -39,4 +73,6 @@ npm install
 npm start
 ```
 
-*Desarrollado por Giselle Cabal Lascano*
+
+
+*developed by Gise Cabal Lascano* 👽
