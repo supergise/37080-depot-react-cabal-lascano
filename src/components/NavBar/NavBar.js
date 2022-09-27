@@ -15,7 +15,7 @@ function NavBar() {
                     <Navbar.Brand as={ Link } to="/">
                         <img
                             src="/logo.png"
-                            className="d-inline-block align-top logo"
+                            className="d-inline-block align-center logo"
                             alt="Logo Universo Depot"
                         />
                             Depot Universe

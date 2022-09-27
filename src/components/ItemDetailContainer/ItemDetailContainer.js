@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from '../ItemDetail/ItemDetail';
-import Spinner from '../Spinner/Spinner';
 import { db } from '../../firebaseConfig';
 import { doc, getDoc, collection } from 'firebase/firestore';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
@@ -32,8 +32,9 @@ const ItemDetailContainer = () => {
     
     return (
         <>
-            { isLoading ? <Spinner/> : 
-                (<section className='containerCards'>
+            { isLoading 
+                ? <Spinner/> 
+                : (<section className='containerCards'>
                     <ItemDetail item={ item } />
                 </section>) 
             }

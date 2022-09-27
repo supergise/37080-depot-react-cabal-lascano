@@ -94,8 +94,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 300px;
+    margin: 50px;
     font-size: 1.5rem;
     color:  rgb(62, 63, 63);
     letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .cartSubTitles {
+        margin: 40px 5px;
+    }
+    .totalCart,
+    .totalLeft,
+    .clearCart {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0px;
+    text-decoration: none;
+    }
 }

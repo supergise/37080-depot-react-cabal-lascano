@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../contex/CartContext';
 import { Link } from 'react-router-dom';
-import { IoTrashOutline } from 'react-icons/io5';
+import CartDetail from '../CartDetail/CartDetail';
 import '../Cart/cart.css';
 
 const Cart = () => {
@@ -23,27 +23,9 @@ const Cart = () => {
     return (
         <div>
             <h2 className='cartTitle'> My Cart </h2>
-            <section className='cartSubTitles'>
-                <h4 className='cartSubTitleProd'> Products </h4>
-                <h4 className='cartSubTitlesOthers'> Price </h4>
-                <h4 className='cartSubTitlesOthers'> Quantity </h4>
-                <h4 className='cartSubTitlesOthers'> Total </h4>
-                <h4 className='cartSubTitlesOthers'> &nbsp; </h4>
-            </section>
-
+            <CartDetail/>
             { cart.map((product) => (
-                <section key={ product.id } className='cartSubTitles'>
-                    <div className='cartSubTitleProd'>
-                        <Link to={ `/item/${ product.id }` }>
-                            <img  className='cartPic' src={ '/img/' + product.img } alt={ product.description }  />
-                        </Link>
-                        <span>{ product.title }</span>
-                    </div>
-                    <span className='cartSubTitlesOthers'> u$d { product.price }</span>
-                    <span className='cartSubTitlesOthers'> { product.quantity }</span>
-                    <span className='cartSubTitlesOthers'> u$d { product.price * product.quantity }</span>
-                    <IoTrashOutline onClick={ () => deleteProduct(product.id) } className='cartTrashIcon cartSubTitlesOthers' /> 
-                </section>
+                <CartDetail key={ product.id } product={ product } deleteProduct={ deleteProduct } />
             ))}
             <section>
                 <span className='clearCart' onClick={ clearCart }> Remove all from cart </span>
