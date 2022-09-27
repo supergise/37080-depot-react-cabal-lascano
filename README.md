@@ -62,9 +62,6 @@ This eCommerce site was made to create a simple way to shop digital illustrated 
 ### Demo
 -------------
 
-
-![](./gitHubAssets/routingDemo.gif)
-
 #### Lift the code locally
 -------------
 
