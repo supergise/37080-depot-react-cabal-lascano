@@ -12,6 +12,7 @@ const Form = ({ cart, totalPrice, clearCart, handleId }) => {
         email: "",
         confirmEmail: "",
     });
+
     const [formErrors, setFormErrors] = useState({
         name: "",
         lastName: "",

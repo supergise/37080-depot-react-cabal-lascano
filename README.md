@@ -11,14 +11,16 @@ This eCommerce site was made to create a simple way to shop digital illustrated 
 | Feature  | Coded?  | Description |
 | :------------ |:---------------:| -----:|
 | Add to cart     | ✔ | Ability of Add a Product on the System |
-|List Products      | ✔        |   Ability of List Products|
-| Edit a Product | ✔        |    Ability of Edit a Product |
+| List Products      | ✔        |   Ability of List Products|
+| Change quantity | ✔        |    Ability to change quantities |
 | Remove from cart | ✔        |    Ability of Delete a Product |
 | Stock | future versión      |   Ability of Update the Stock |
 
-#### Demo
+#### Demo 1
 -------------
 ![](./gitHubAssets/routingDemo1.gif)
+
+
 
 
 #### Purchase Features
@@ -32,11 +34,16 @@ This eCommerce site was made to create a simple way to shop digital illustrated 
 | Remove a Item | ✔        |    Ability of Remove a Item from the Cart|
 | Checkout |  ✔    |   Ability to Checkout |
 
+#### Demo 2
+-------------
 
+![](./gitHubAssets/routingDemo2.gif)
 
-```javascript 
-const = 'poner la funcion que corresponda '
-```
+#### Demo 3
+-------------
+
+![](./gitHubAssets/routingDemo3.gif)
+
 
 
 ### Libraries
